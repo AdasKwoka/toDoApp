@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDoApp</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Mono&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style/main.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1 class="greeting">Witaj! Zaplanuj swój dzień!</h1>
+    <section class="add-task">
+      <form action="">
+        <div class="wrap-add"><label for="add">Dodaj zadanie:</label><input type="text" id="add"></div>
+        <div class="wrap-prio"><label for="prio">Dodaj priorytet:</label><input type="checkbox" id="prio"></div>
+        <div class="wrap-search"><label for="search">Wyszukaj zadanie: </label><input type="text" id="search"></div>
+        <button>Dodaj zadanie</button>
+      </form>
+    </section>
+    <section class="tasks-to-do">
+      <p>Zadania do wykonania: </p>
+      <ul class="to-do-list">
+      </ul>
+    </section>
+    <section class="done-tasks">
+      <p>Zadania wykonane: </p>
+      <ul class="done-list">
+      </ul>
+    </section>
+  </div>
+  <script src="./js/Task.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

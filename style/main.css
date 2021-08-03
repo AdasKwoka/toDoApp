@@ -1,0 +1,180 @@
+/* font-family: 'Lato', sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  background-image: url(../img/body-small.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.greeting {
+  position: relative;
+  padding: 5vh 0;
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  z-index: 1;
+}
+
+.add-task {
+  position: relative;
+  z-index: 1;
+  width: 90vw;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.wrap-add {
+  margin-bottom: 2vh;
+}
+
+label {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.wrap-prio {
+  text-align: center;
+}
+
+label[for="prio"] {
+  display: inline-block;
+}
+
+input#add,
+input#search {
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+  font-size: 1.6rem;
+  background-color: #ccc;
+  border: 2px solid black;
+  transition: .2s;
+}
+
+input#add:focus,
+input#search:focus {
+  background-color: #fff;
+  box-shadow: 0 0 0 2px black;
+}
+
+.add-task button {
+  display: block;
+  margin: 2vh auto 0;
+  padding: 5px 10px;
+  border: 2px solid white;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.tasks-to-do,
+.done-tasks {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  width: 90%;
+  margin: 5vh auto 0;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.tasks-to-do p,
+.done-tasks p {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 5px 0;
+}
+
+.to-do-list,
+.done-list {
+  list-style: none;
+}
+
+li button.remove-task {
+  border: none;
+  background-color: transparent;
+  color: red;
+  margin-left: 20px;
+  font-size: 1.4rem;
+}
+
+li button.done-task {
+  border: none;
+  background-color: transparent;
+  color: green !important;
+  margin-left: 20px;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+  #prio {
+    width: 20px;
+    height: 20px;
+  }
+
+  .tasks-to-do,
+  .done-tasks {
+    font-size: 1.5rem;
+  }
+
+  li button.remove-task,
+  li button.done-task {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-image: url(../img/body-big.jpg);
+  }
+
+  .add-task button {
+    padding: 10px 15px;
+    font-size: 1.3rem;
+  }
+
+  .add-task button:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+  }
+
+  #prio:hover {
+    cursor: pointer;
+  }
+
+  li button.remove-task:hover,
+  li button.done-task:hover {
+    cursor: pointer;
+  }
+}
